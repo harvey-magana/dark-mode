@@ -1,10 +1,11 @@
 import React from 'react';
 import { useDarkMode } from '../hooks/useDarkMode';
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [darkMode, setDarkMode] = useDarkMode(false);
+  console.log(darkMode)
+  console.log(props)
   const toggleMode = e => {
-    console.log("I was clicked...");
     e.preventDefault();
     setDarkMode(!darkMode);
   };
